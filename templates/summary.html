@@ -1,0 +1,48 @@
+<!Doctype html>
+<html lang="eng">
+
+<head>
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+
+<body style="text-align:center">
+
+    <!-- The button used to copy the text -->
+
+    <button onclick="myFunction()">Copy text</button>
+    <input type="button" class="btn btn-primary" 
+    onclick="GeneratePdf();" value="GeneratePdf">
+
+    <textarea id="summary_box" style="margin: 104px ; width: 992px; height: 540px;" name="summary" type='text'
+        class="w-full bg-gray-100 bg-opacity-100 rounded border border-gray-400 focus:border-indigo-800 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 leading-6 transition-colors resize= none duration-200 ease-in-out">{{summary}}</textarea></br>
+    
+    
+    <script>
+                  
+        // Function to GeneratePdf
+        function GeneratePdf() {
+            var element = document.getElementById('summary_box');
+            html2pdf(element);
+        }
+    
+  
+        function myFunction() {
+            /* Get the text field */
+            var copyText = document.getElementById("summary_box");
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
