@@ -6,15 +6,11 @@ import math
 import re
 import nltk
 from flask import Flask, render_template
-import sys
-import logging
 from nltk.corpus import stopwords
 import string
 stopwords = nltk.download('stopwords')
 stopwords = nltk.corpus.stopwords.words('english')
 ps = PorterStemmer()
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
 
 
 #text = str(input('paste your text here  '))
