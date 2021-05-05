@@ -3,6 +3,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk import sent_tokenize, word_tokenize, PorterStemmer
 from flask import Flask, render_template, request
 import math
+nltk.download('punkt')
 import re
 import nltk
 from flask import Flask, render_template
