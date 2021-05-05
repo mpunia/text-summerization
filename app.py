@@ -7,6 +7,7 @@ import re
 import nltk
 from nltk.corpus import stopwords
 import string
+stopwords = nltk.download('stopwords')
 stopwords = nltk.corpus.stopwords.words('english')
 ps = PorterStemmer()
 
