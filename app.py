@@ -5,6 +5,7 @@ from flask import Flask, render_template, request
 import math
 import re
 import nltk
+nltk.download('punkt')
 from nltk.corpus import stopwords
 import string
 stopwords = nltk.download('stopwords')
