@@ -167,7 +167,7 @@ def summary():
         summary = clean_text(message)
 
         return render_template('summary.html',summary=summary)
-    return render_template("homes.html")
+    return render_template("home.html")
 
 
 if __name__ == "__main__":
