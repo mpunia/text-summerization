@@ -10,7 +10,7 @@ from nltk.corpus import stopwords
 import string
 stopwords = nltk.download('stopwords')
 stopwords = nltk.corpus.stopwords.words('english')
-ps = PorterStemmer()sent_tokenize()
+ps = PorterStemmer()
 #text = str(input('paste your text here  '))
 #sentence = sent_tokenize(text)
 
