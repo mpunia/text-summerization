@@ -22,8 +22,7 @@ sentence = sent_tokenize(text)
 
 def clean_text(text):
     sent_freq = {}
-    #sentences = sent_tokenize(text)
-    sentence = re.sub(r'^https?:\/\/*[\r\n]*' , '' , str(text))
+    sentence = re.sub(r"http\S+", "", text)
     sentence = re.sub(r'[^a-zA-Z0-9 _,!.s]' , '' , sentence)
     sentences = sent_tokenize(sentence)
 
